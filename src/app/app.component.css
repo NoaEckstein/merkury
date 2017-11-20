@@ -1,0 +1,15 @@
+.container {
+    display: -webkit-flex;
+    display: flex;
+  }
+  nav {
+    width: 25%;
+  }
+  .flex-column {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+  .display{
+      display: block;
+  }
+  

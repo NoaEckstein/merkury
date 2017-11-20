@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  something: boolean;
+
+  displaySidebar() {
+    console.log('Hi');
+    (this.something === true) ? this.something = false : this.something = true;
+  };
 }
+
