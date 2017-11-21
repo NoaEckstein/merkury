@@ -7,11 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  something: boolean;
+  clicked: boolean;
 
   displaySidebar() {
-    console.log('Hi');
-    (this.something === true) ? this.something = false : this.something = true;
+    (this.clicked === true) ? this.clicked = false : this.clicked = true;
   };
 }
 
