@@ -4,7 +4,6 @@
     height: 100%;
     width: 100%;
     background-color: #808080;
-    /* overflow: auto; */
     overflow: hidden;
   }
   .container2{
@@ -16,10 +15,10 @@
   .container3{
     display: flex;
     flex-direction: row;
-    height: 25%;
+    height: 70%;
     width: 100%;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     background-color: #3dca1a;
     
   }
