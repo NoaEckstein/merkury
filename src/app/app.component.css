@@ -1,3 +1,19 @@
+@media screen and (max-width: 480px) {
+  nav {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(153, 51, 51);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  nav {
+    width: 20%;
+    height: 100%;
+    background-color: rebeccapurple;
+  }
+}
+
 .container1 {
     display: flex;
     flex-direction: row;
@@ -15,6 +31,7 @@
   .container3{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: 70%;
     width: 100%;
     justify-content: space-around;
@@ -25,6 +42,7 @@
   .container4{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: 70%;
     width: 100%;
     justify-content: space-around;
@@ -37,11 +55,7 @@
     flex: 1;
     overflow: auto;
   }
-  nav {
-    width: 20%;
-    height: 100%;
-    background-color: rebeccapurple;
-  }
+  
   .toolbar{
       display: flex;
       flex-direction: row;
@@ -49,3 +63,84 @@
       width: 100%;
       background-color: green;
   }
+  li {
+    border: 1px solid black;
+    list-style: none;
+    border-left-width: thick;
+  }
+
+  li:hover {
+    border-left-color: blue;
+  }
+
+ .active{
+  border-left-color: blue;
+ }
+
+ a {
+  text-decoration: none;
+  color: white;
+ }
+
+ .toolbar-right-button{
+  cursor: pointer;
+  background-color: rgb(76, 86, 175); 
+   border-radius: 12px;
+   border: none;
+   display: inline-block;
+   transition-duration: 0.4s;
+   outline: none;
+   box-shadow: 0 2px #999;
+ }
+
+ .toolbar-right-button:hover {
+  background-color: #5566a8; /* Green */
+}
+
+ .toolbar-right-button:active {
+  background-color: rgb(76, 86, 175);
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+.fa-bell{
+  position: relative;
+  /* color: grey; */
+  cursor: pointer;
+}
+.fa-circle{
+  position: absolute;
+  font-size: 0.6em;
+  top: -1px;
+  color: red;
+  right: -1px;
+}
+span.num {
+  position: absolute;
+  font-size: 0.3em;
+  top: 1px;
+  color: #fff;
+  right: 2px;
+}
+/*.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
