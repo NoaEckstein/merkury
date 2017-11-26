@@ -10,7 +10,7 @@
   nav {
     width: 20%;
     height: 100%;
-    background-color: rebeccapurple;
+    background-color: #0e1a35;
   }
 }
 
@@ -122,6 +122,27 @@ span.num {
   color: #fff;
   right: 2px;
 }
+
+li.home {
+  list-style-image: url('../assets/menu/home.png');
+  }
+li.workflow {
+  list-style-image: url('../assets/menu/workflow.png');
+  }
+li.statistics {
+  list-style-image: url('../assets/menu/statistics.png');
+  }
+li.calendar {
+  list-style-image: url('../assets/menu/calendar.png');
+  }
+li.users {
+  list-style-image: url('../assets/menu/users.png');
+  }
+li.settings {
+  list-style-image: url('../assets/menu/settings.png');
+  }
+
+
 /*.button {
   display: inline-block;
   padding: 15px 25px;

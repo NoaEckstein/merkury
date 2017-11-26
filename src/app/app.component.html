@@ -4,12 +4,12 @@
       <img src="../assets/logo.png" alt="logo" width="100%" height="auto" (click)="displaySidebar()">
     </div>
     <ul>
-      <li [ngClass]="{'active':id === 1}" id="1" (click)="select(id=1)"><a href="#">Home</a></li>
-      <li [ngClass]="{'active':id === 2}" id="2" (click)="select(id=2)"><a href="#">Workflow</a></li>
-      <li [ngClass]="{'active':id === 3}" id="3" (click)="select(id=3)"><a href="#">Statistics</a></li>
-      <li [ngClass]="{'active':id === 4}" id="4" (click)="select(id=4)"><a href="#">Calendar</a></li>
-      <li [ngClass]="{'active':id === 5}" id="5" (click)="select(id=5)"><a href="#">Users</a></li>
-      <li [ngClass]="{'active':id === 6}" id="6" (click)="select(id=6)"><a href="#">Settings</a></li>
+      <li [ngClass]="{'active':id === 1}" class="home" id="1" (click)="select(id=1)"><a href="#">Home</a></li>
+      <li [ngClass]="{'active':id === 2}" class="workflow" id="2" (click)="select(id=2)"><a href="#">Workflow</a></li>
+      <li [ngClass]="{'active':id === 3}" class="statistics" id="3" (click)="select(id=3)"><a href="#">Statistics</a></li>
+      <li [ngClass]="{'active':id === 4}" class="calendar" id="4" (click)="select(id=4)"><a href="#">Calendar</a></li>
+      <li [ngClass]="{'active':id === 5}" class="users" id="5" (click)="select(id=5)"><a href="#">Users</a></li>
+      <li [ngClass]="{'active':id === 6}" class="settings" id="6" (click)="select(id=6)"><a href="#">Settings</a></li>
 
     </ul>
   </nav>
@@ -24,6 +24,8 @@
         <button class="toolbar-right-button"><i class="fa fa-plus" aria-hidden="true"></i>Add project</button>
         <i class="fa fa-envelope" aria-hidden="true"></i>
         <i class="fa fa-bell" aria-hidden="true"><i class="fa fa-circle" aria-hidden="true"></i><span class="num">2</span></i>
+        <img src="../assets/users/user1.png" alt="user" style="border-radius:50% ; width:20%">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
       </div>
      
     </section>
