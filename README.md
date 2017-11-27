@@ -1,5 +1,32 @@
 # Merkury
 
+# Welcome to Noa's dashboard
+
+## What is this?
+A toy project with Angular, TS
+
+## What does this project contains?
+angular-seed - The client library (Angular & typescript)
+
+### How to run?
+
+#### Install all the client dependencies
+From the project root dir execute the following
+
+`cd angular-seed`
+
+`npm i`
+
+#### Build the client under dev (currently only dev is working)
+`npm run build.dev`
+
+#### Running the client
+`npm start`
+
+#### Have fun :)
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
 
 ## Development server

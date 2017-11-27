@@ -2,7 +2,12 @@
   nav {
     width: 50%;
     height: 100%;
-    background-color: rgb(153, 51, 51);
+    background-color: #0e1a35;
+    position: absolute;
+  }
+
+  .container4 {
+    flex-wrap: wrap;
   }
 }
 
@@ -15,13 +20,18 @@
 }
 
 /* flex */
+h1 {
+ padding-left: 30px;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
-  background-color: #808080;
   overflow: hidden;
+  background-color: #f6f7fa;
+  padding-left: 10px;
 }
 
 .flex-column {
@@ -30,12 +40,16 @@
   overflow: auto;
   flex-direction: row;
 }
+
+.direction-row {
+  display: flex;
+  flex-direction: row;
+}
   
 .container2{
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #ca1a1a;
 }
 
 .container3{
@@ -45,18 +59,21 @@
   height: 70%;
   width: 100%;
   justify-content: space-around;
-  background-color: #3dca1a;
+  padding-bottom: 30px;
+ }
+
+ .container3 img {
+  height: 200px;
  }
 
 .container4{
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;
-  height: 70%;
+  height: 100%;
   width: 100%;
   justify-content: space-around;
-  align-items: center;
-  background-color: #cac71a;
+  /* align-items: center; */
 }
 
 .toolbar{
@@ -64,7 +81,8 @@
   flex-direction: row;
   height: 14.7%;
   width: 100%;
-  background-color: green;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .middle{
@@ -72,20 +90,24 @@
 }
 
 /* menu-nav */
-ul{
+nav ul{
   list-style-position: inside;
   margin: 0;
   padding: 0;
 }
 
-li:hover {
-  border-left-color: red;
+nav li:hover {
+  border-left-color: #5584ff;
+  background-color: #122143;
 }
 
-li {
-  border: 1px solid black;
+nav li {
+  border: 1px solid #0e1a35;
   border-left-width: thick;
-  padding-left: 50px;
+  padding-left: 25px;
+  padding-right: 20px; 
+  padding-top: 20px;
+  height: 70px;
 }
 
 a {
@@ -94,37 +116,55 @@ a {
 }
 
 .active{
-  border-left-color: red;
+  border-left-color: #5584ff;
+  background-color: #122143
 }
 
  /* interaction-boxes */
 .container4 ul{
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* align-content: space-around; */
   padding-bottom: 20px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.read{
+  background-color: #9e3c3c;
 }
 
 .container4 li{
+  background-color: white;
   padding-left: 20px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  height: 30%;
-  width: 100%;
-  padding-right: 10px;
+  vertical-align: middle;
+  border-top: 0.5px solid #dce1e9;
+  border-bottom: 0.5px solid #dce1e9;
+  border-left: 0.5px solid #dce1e9;
+  border-right: 0.5px solid #dce1e9;
+  height: 100%;
+  width: 90%;
+  padding-right: 20px;
+  padding-top: 25px;
+  vertical-align: middle;
 }
 
 .container4 li:first-child {
   font-weight: bold;
+  height: 50%;
+}
+
+.container4 img {
+  padding-right: 10px;
 }
 
 /* toolbar button */
 .toolbar-right-button{
+  height: 100%;
   cursor: pointer;
-  background-color: rgb(76, 86, 175); 
+  background-color: #5584ff; 
   border-radius: 12px;
   border: none;
   display: inline-block;
@@ -134,21 +174,24 @@ a {
 }
 
 .toolbar-right-button:hover {
-  background-color: #5566a8; /* Green */
+  background-color: #7c9be9; 
 }
 
 .toolbar-right-button:active {
-  background-color: rgb(76, 86, 175);
+  background-color: #5584ff;
   box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
 
 .toolbar-left{
-  background-color: wheat; 
+  padding-left: 50px;
 }
 
 .toolbar-right{
-  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-content:space-between;
 }
  
 /* icons */
@@ -185,8 +228,12 @@ li.settings {
   position: absolute;
   font-size: 0.6em;
   top: -1px;
-  color: red;
+  color: #5384ff;
   right: -1px;
+}
+
+.fa-search{
+  padding-left: 15px;
 }
 
 span.num {
@@ -209,12 +256,9 @@ span.num {
 .tasks-circle {
  position: inherit;
  font-size: 30px;
- padding-left: 5px;
 }
 
 .num-tasks {
-  padding: 0;
-  margin: 0;
   position: relative;
   font-size: 0.5em;
   font-weight: bold;
