@@ -4,31 +4,47 @@
       <img src="../assets/logo.png" alt="logo" width="100%" height="auto" (click)="displaySidebar()">
     </div>
     <ul>
-      <li [ngClass]="{'active':id === 1}" class="home" id="1" (click)="select(id=1)"><a href="#">Home</a></li>
-      <li [ngClass]="{'active':id === 2}" class="workflow" id="2" (click)="select(id=2)"><a href="#">Workflow</a></li>
-      <li [ngClass]="{'active':id === 3}" class="statistics" id="3" (click)="select(id=3)"><a href="#">Statistics</a></li>
-      <li [ngClass]="{'active':id === 4}" class="calendar" id="4" (click)="select(id=4)"><a href="#">Calendar</a></li>
-      <li [ngClass]="{'active':id === 5}" class="users" id="5" (click)="select(id=5)"><a href="#">Users</a></li>
-      <li [ngClass]="{'active':id === 6}" class="settings" id="6" (click)="select(id=6)"><a href="#">Settings</a></li>
+      <li [ngClass]="{'active':id === 1}" class="home" id="1" (click)="select(id=1)">
+        <a href="#">Home</a>
+      </li>
+      <li [ngClass]="{'active':id === 2}" class="workflow" id="2" (click)="select(id=2)">
+        <a href="#">Workflow</a>
+      </li>
+      <li [ngClass]="{'active':id === 3}" class="statistics" id="3" (click)="select(id=3)">
+        <a href="#">Statistics</a>
+      </li>
+      <li [ngClass]="{'active':id === 4}" class="calendar" id="4" (click)="select(id=4)">
+        <a href="#">Calendar</a>
+      </li>
+      <li [ngClass]="{'active':id === 5}" class="users" id="5" (click)="select(id=5)">
+        <a href="#">Users</a>
+      </li>
+      <li [ngClass]="{'active':id === 6}" class="settings" id="6" (click)="select(id=6)">
+        <a href="#">Settings</a>
+      </li>
 
     </ul>
   </nav>
   <div class="flex-column">
     <section class="toolbar">
       <div class="toolbar-left">
-          <i *ngIf='clicked' class="fa fa-caret-left" aria-hidden="true"></i>
-          <i class="fa fa-bars" aria-hidden="true" style="cursor:pointer" (click)="displaySidebar()"></i>
-          <i class="fa fa-search" aria-hidden="true"></i>
+        <i *ngIf='clicked' class="fa fa-caret-left" aria-hidden="true"></i>
+        <i class="fa fa-bars" aria-hidden="true" style="cursor:pointer" (click)="displaySidebar()"></i>
+        <i class="fa fa-search" aria-hidden="true"></i>
       </div>
       <div class="middle"></div>
       <div class="toolbar-right">
-        <button class="toolbar-right-button"><i class="fa fa-plus" aria-hidden="true"></i>Add project</button>
+        <button class="toolbar-right-button">
+          <i class="fa fa-plus" aria-hidden="true"></i>Add project</button>
         <i class="fa fa-envelope" aria-hidden="true"></i>
-        <i class="fa fa-bell" aria-hidden="true"><i class="fa fa-circle" aria-hidden="true"></i><span class="num">2</span></i>
+        <i class="fa fa-bell" aria-hidden="true">
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <span class="num">2</span>
+        </i>
         <img src="../assets/users/user1.png" alt="user" style="border-radius:50% ; width:20%">
         <i class="fa fa-caret-down" aria-hidden="true"></i>
       </div>
-     
+
     </section>
     <section class="container2">
       <h1>Hello John!</h1>
@@ -39,7 +55,17 @@
     </section>
     <section class="container4">
       <ul>
-        <li class="tasks"><div>Tasks</div><div class="item-2"><i class="fa fa-circle tasks-circle" aria-hidden="true"></i><i class="fa fa-circle tasks-circle" aria-hidden="true"></i></div></li>
+        <li class="tasks">
+          <div>Tasks</div>
+          <div class="item-2">
+            <i class="fa fa-circle tasks-circle" aria-hidden="true">
+              <span class="num-tasks">5</span>
+            </i>
+            <i class="fa fa-circle tasks-circle" aria-hidden="true">
+                <span class="num-tasks">2</span>
+            </i>
+          </div>
+        </li>
         <li *ngFor="let tesk of tasks">{{tesk.title}}</li>
       </ul>
 
