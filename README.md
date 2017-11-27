@@ -1,6 +1,4 @@
-# Merkury
-
-# Welcome to Noa's dashboard
+# Merkury dashboard
 
 ## What is this?
 A toy project with Angular, TS
