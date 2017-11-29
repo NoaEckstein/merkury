@@ -26,7 +26,7 @@ export const TASKS: Task[] = [
         id: 4,
         title: 'Free Icon set vol.3',
         days: 10,
-        status: 'delays',
+        status: 'left',
         personName : './assets/f.type.png'  
       }
 ];

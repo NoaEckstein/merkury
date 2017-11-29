@@ -48,81 +48,83 @@
         </div>
       </div>
     </section>
-      <section class="container2">
-        <h1>Hello John!</h1>
-      </section>
-      <section class="container3">
-        <img src="../assets/graph1.png" alt="logo">
-        <img src="../assets/graph2.png" alt="logo">
-      </section>
-      <section class="container4">
-        <ul>
-          <li class="tasks">
-            <div>Tasks</div>
-            <div>
-              <i class="fa fa-circle tasks-circle" aria-hidden="true">
-                <span class="num-tasks">5</span>
-              </i>
-              <i class="fa fa-circle tasks-circle" aria-hidden="true" style="color:#f83c7b;">
-                <span class="num-tasks">2</span>
-              </i>
-            </div>
-          </li>
-          <li *ngFor="let tesk of tasks" class="direction-row">
-            <div>
-              <img [src]="tesk.personName" alt="first letter names">
-            </div>
-            <div>
-              {{tesk.title}}
-              <br>
+    <section class="container2">
+      <h1>Hello John!</h1>
+    </section>
+    <section class="container3">
+        <img src="../assets/sales.PNG" alt="sales">
+        <img src="../assets/reports.PNG" alt="reports">
+    </section>
+    <section class="container4">
+      <ul>
+        <li class="tasks">
+          <div>Tasks</div>
+          <div>
+            <i class="fa fa-circle tasks-circle" aria-hidden="true">
+              <span class="num-tasks">5</span>
+            </i>
+            <i class="fa fa-circle tasks-circle" aria-hidden="true" style="color:#f83c7b;">
+              <span class="num-tasks">2</span>
+            </i>
+          </div>
+        </li>
+        <li *ngFor="let tesk of tasks" class="direction-row">
+          <div>
+            <img [src]="tesk.personName" alt="first letter names">
+          </div>
+          <div>
+            <span class="bold">{{tesk.title}}</span>
+            <div [ngClass]="{'warning':tesk.status === 'delays'}">
               <i class="fa fa-clock-o" aria-hidden="true"></i> {{tesk.days}} days {{tesk.status}}
             </div>
-            <div>
-              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li class="tasks">
-            <div>Messages</div>
-            <div>
-              <i class="fa fa-circle tasks-circle" aria-hidden="true">
-                <span class="num-tasks">2</span>
-              </i>
-            </div>
-          </li>
-          <li *ngFor='let message of messages' class="direction-row" [ngClass]="{'read':message.readStatus === false}">
-            <div>
-              <img [src]="message.senderPhoto" alt="profile pic" style="border-radius: 50%;">
-            </div>
-            <div>
-              {{message.senderName}} {{message.messegeSendTime}}
-              <br> {{message.messageContent}}
-              <br>
-              <i class="fa fa-cog" aria-hidden="true"></i>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li class="tasks">
-            <div>Activity</div>
-            <div>
-              <i class="fa fa-circle tasks-circle" aria-hidden="true">
-                <span class="num-tasks" style="right: 28px;">10</span>
-              </i>
-            </div>
-          </li>
-          <li *ngFor='let activity of activities' class="direction-row">
-            <div>
-              <img [src]="activity.senderPhoto" alt="profile pic" style="border-radius: 50%;">
-            </div>
-            <div>
-              {{activity.name}} {{activity.activityName}} {{activity.activityTitle}}
-              <br>
-              <i class="fa fa-clock-o" aria-hidden="true"></i> {{activity.activityTimeRef}}
-            </div>
-          </li>
-        </ul>
-      </section>
+          </div>
+          <div>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li class="tasks">
+          <div>Messages</div>
+          <div>
+            <i class="fa fa-circle tasks-circle" aria-hidden="true">
+              <span class="num-tasks">2</span>
+            </i>
+          </div>
+        </li>
+        <li *ngFor='let message of messages' class="direction-row" [ngClass]="{'read':message.readStatus === false}">
+          <div>
+            <img [src]="message.senderPhoto" alt="profile pic" style="border-radius: 50%;">
+          </div>
+          <div>
+            {{message.senderName}} {{message.messegeSendTime}}
+            <br> {{message.messageContent}}
+            <br>
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li class="tasks">
+          <div>Activity</div>
+          <div>
+            <i class="fa fa-circle tasks-circle" aria-hidden="true">
+              <span class="num-tasks" style="right: 28px;">10</span>
+            </i>
+          </div>
+        </li>
+        <li *ngFor='let activity of activities' class="direction-row">
+          <div>
+            <img [src]="activity.senderPhoto" alt="profile pic" style="border-radius: 50%;">
+          </div>
+          <div>
+            {{activity.name}} {{activity.activityName}} {{activity.activityTitle}}
+            <br>
+            <i class="fa fa-clock-o" aria-hidden="true"></i> {{activity.activityTimeRef}}
+          </div>
+        </li>
+      </ul>
+    </section>
   </div>
 </div>
