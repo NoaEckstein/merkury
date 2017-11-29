@@ -113,9 +113,11 @@
           </div>
         </li>
         <li *ngFor='let activity of activities' class="direction-row">
-          <div style="border-radius:50%; padding:0; margin-right:20px;">
+          <div style="border-radius:50%; padding:0; margin-right:20px;z-index:10">
             <img [src]="activity.senderPhoto" alt="profile pic" style="border-radius: 50%; width:100%;">
-            <hr *ngIf = '(activity.id !== 4)'>
+            <!-- <hr *ngIf = '(activity.id !== 4)'> -->
+            <div *ngIf = '(activity.id !== 4)' style="z-index:0;margin-left:25px;position:relative;width:1px; height:135px; background-color:#dce1e9;"></div>
+            <!-- <canvas *ngIf = '(activity.id !== 4)' id="myCanvas" width="200" height="50" style="border:1px solid #d3d3d3;"></canvas> -->
           </div>
           <div class="small-small-font">
            <span class="bold">{{activity.name}}</span>  {{activity.activityName}} <span class="bold">{{activity.activityTitle}}</span>
