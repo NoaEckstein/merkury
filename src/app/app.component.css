@@ -79,6 +79,8 @@ h1 {
 .direction-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-start;
 }
   
 .container2{
@@ -162,12 +164,16 @@ a {
   vertical-align: middle;
 }
 
+.container4 ul:nth-child(odd) li {
+  background-color: white;
+}
+
 .read{
-  background-color: #9e3c3c;
+  background-color: #f4f5f8;
 }
 
 .container4 li{
-  background-color: white;
+  /* background-color: white; */
   padding-left: 20px;
   vertical-align: middle;
   border-top: 0.5px solid #dce1e9;
@@ -186,21 +192,45 @@ a {
   height: 30%;
 }
 
-.container4 img {
-  padding-right: 10px;
+.container4 ul:last-child li:first-child {
+  border-top: 0.5px solid #dce1e9;
+  border-bottom: 0.5px solid #dce1e9;
+  border-left: 0.5px solid #dce1e9;
+  border-right: 0.5px solid #dce1e9;
+}
+
+.container4 ul:last-child li {
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0.5px solid #dce1e9;
+  border-right: 0.5px solid #dce1e9;
+}
+
+.container4 ul:last-child li:last-child {
+  border-top: 0;
+  border-bottom: 0.5px solid #dce1e9;
+  border-left: 0.5px solid #dce1e9;
+  border-right: 0.5px solid #dce1e9;
 }
 
 /* toolbar button */
 .toolbar-right-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
   cursor: pointer;
   background-color: #5584ff; 
-  border-radius: 12px;
+  border-radius: 40%;
   border: none;
-  display: inline-block;
+  color: white;
+  border-bottom-right-radius: 45px;
+  border-top-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  border-top-left-radius: 45px;
   transition-duration: 0.4s;
   outline: none;
-  box-shadow: 0 2px #999;
+  padding-right: 20px;
 }
 
 .toolbar-right-button:hover {
@@ -208,8 +238,6 @@ a {
 }
 
 .toolbar-right-button:active {
-  background-color: #5584ff;
-  box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
 
@@ -219,9 +247,8 @@ a {
 
 .toolbar-right{
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  justify-content:space-between;
 }
  
 /* icons */
@@ -274,6 +301,16 @@ li.settings {
   font-size: 2.5em;
   color: #666;
   padding-left: 30px;
+  align-self: flex-end;
+}
+
+.fa-plus {
+  margin:10px;
+  color:#98b5ff;
+}
+
+.fa-caret-down {
+  padding-left: 0px; 
 }
 
 span.num {
@@ -312,4 +349,41 @@ span.num {
 
 .bold {
   font-weight: bold;
+}
+
+.grey {
+  color: #666;
+}
+
+.small-font {
+  font-size: 1em;
+}
+
+.small-small-font {
+  font-size: 0.8em;
+}
+
+.big-font {
+  font-size: 1.1em;
+}
+
+.background-white {
+  background-color: white;
+}
+
+hr {
+  transform: rotate(90deg);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-right :nth-child(-n+3) {
+  margin-right: 10px;
+}
+
+.big-big-font {
+  font-size: 2em;
 }

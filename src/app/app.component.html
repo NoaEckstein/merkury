@@ -33,23 +33,21 @@
       </div>
       <div class="middle"></div>
       <div class="toolbar-right">
-        <div>
           <button class="toolbar-right-button">
-            <i class="fa fa-plus" aria-hidden="true"></i>Add project</button>
+          <i class="fa fa-plus" aria-hidden="true"></i>Add project</button>
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <i class="fa fa-bell" aria-hidden="true">
             <i class="fa fa-circle" aria-hidden="true"></i>
             <span class="num">2</span>
           </i>
-        </div>
-        <div>
+        <div class="user">
           <img src="../assets/users/user1.png" alt="user" style="border-radius:50% ; width:40% ;top: -10px;">
           <i class="fa fa-caret-down" aria-hidden="true"></i>
         </div>
       </div>
     </section>
     <section class="container2">
-      <h1>Hello John!</h1>
+      <h1 class="big-big-font">Hello John!</h1>
     </section>
     <section class="container3">
         <img src="../assets/sales.PNG" alt="sales">
@@ -69,12 +67,12 @@
           </div>
         </li>
         <li *ngFor="let tesk of tasks" class="direction-row">
-          <div>
+          <div style="margin-right:20px;">
             <img [src]="tesk.personName" alt="first letter names">
           </div>
           <div>
-            <span class="bold">{{tesk.title}}</span>
-            <div [ngClass]="{'warning':tesk.status === 'delays'}">
+            <span class="bold big-font">{{tesk.title}}</span>
+            <div [ngClass]="(tesk.status === 'delays') ? 'warning' : 'grey'" class="small-font">
               <i class="fa fa-clock-o" aria-hidden="true"></i> {{tesk.days}} days {{tesk.status}}
             </div>
           </div>
@@ -84,7 +82,7 @@
         </li>
       </ul>
       <ul>
-        <li class="tasks">
+        <li class="tasks background-white">
           <div>Messages</div>
           <div>
             <i class="fa fa-circle tasks-circle" aria-hidden="true">
@@ -92,16 +90,16 @@
             </i>
           </div>
         </li>
-        <li *ngFor='let message of messages' class="direction-row" [ngClass]="{'read':message.readStatus === false}">
-          <div>
+        <li *ngFor='let message of messages' class="direction-row" [ngClass]="(message.readStatus === false) ? 'read' : 'background-white'">
+          <div style="border-radius:50%; padding:0; margin-right:20px;">
             <img [src]="message.senderPhoto" alt="profile pic" style="border-radius: 50%;">
           </div>
           <div>
-            {{message.senderName}} {{message.messegeSendTime}}
-            <br> {{message.messageContent}}
+           <span class="bold">{{message.senderName}} </span><span class="grey">{{message.messegeSendTime}}</span>
+            <br> <span class="small-small-font">{{message.messageContent}}</span>
             <br>
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            <i class="fa fa-cog" aria-hidden="true"></i>
+            <i class="fa fa-arrow-left grey" aria-hidden="true"></i>
+            <i class="fa fa-cog grey" aria-hidden="true"></i>
           </div>
         </li>
       </ul>
@@ -115,11 +113,12 @@
           </div>
         </li>
         <li *ngFor='let activity of activities' class="direction-row">
-          <div>
-            <img [src]="activity.senderPhoto" alt="profile pic" style="border-radius: 50%;">
+          <div style="border-radius:50%; padding:0; margin-right:20px;">
+            <img [src]="activity.senderPhoto" alt="profile pic" style="border-radius: 50%; width:100%;">
+            <hr *ngIf = '(activity.id !== 4)'>
           </div>
-          <div>
-            {{activity.name}} {{activity.activityName}} {{activity.activityTitle}}
+          <div class="small-small-font">
+           <span class="bold">{{activity.name}}</span>  {{activity.activityName}} <span class="bold">{{activity.activityTitle}}</span>
             <br>
             <i class="fa fa-clock-o" aria-hidden="true"></i> {{activity.activityTimeRef}}
           </div>
