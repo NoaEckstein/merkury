@@ -12,9 +12,8 @@
 
   .container3 {
     flex-wrap: wrap;
-    background-color:  green;
-    
   }
+
   .container3{
     height: 100%;
     width: 100%;
@@ -25,10 +24,25 @@
     margin: 0;
     padding: 0;
   }
+
   .container3 img:nth-child(2n)  {
     height: 30%;
     margin: 0;
     padding: 0;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .user {
+    border-radius: 50%;
+    width: 130px;
+    height: 40px;
+  }
+
+  .toolbar-right-button {
+    margin-left: 50px;
   }
 }
 
@@ -168,23 +182,26 @@ a {
   background-color: white;
 }
 
+.container4 img {
+  border-radius: 50%;
+	width: 50px;
+	height: 50px; 
+}
+
 .read{
   background-color: #f4f5f8;
 }
 
 .container4 li{
-  /* background-color: white; */
+  height: 50%;
   padding-left: 20px;
-  vertical-align: middle;
   border-top: 0.5px solid #dce1e9;
   border-bottom: 0.5px solid #dce1e9;
   border-left: 0.5px solid #dce1e9;
   border-right: 0.5px solid #dce1e9;
-  height: 70%;
   width: 90%;
   padding-right: 20px;
   padding-top: 25px;
-  vertical-align: middle;
 }
 
 .container4 li:first-child {
@@ -213,6 +230,11 @@ a {
   border-right: 0.5px solid #dce1e9;
 }
 
+.user img {
+  border-radius: 50%;
+	width: 40px;
+	height: 40px; 
+}
 /* toolbar button */
 .toolbar-right-button{
   display: flex;
@@ -277,6 +299,7 @@ li.settings {
 }
 
 .fa-bell {
+  font-size: 1.5em;
   position: relative;
   cursor: pointer;
 }
@@ -286,7 +309,7 @@ li.settings {
   font-size: 0.6em;
   top: -1px;
   color: #5384ff;
-  right: -1px;
+  right: -22px;
 }
 
 .fa-search{
@@ -304,6 +327,10 @@ li.settings {
   align-self: flex-end;
 }
 
+.fa-envelope {
+  font-size: 1.5em;
+}
+
 .fa-plus {
   margin:10px;
   color:#98b5ff;
@@ -315,10 +342,10 @@ li.settings {
 
 span.num {
   position: absolute;
-  font-size: 0.3em;
+  font-size: 0.4em;
   top: 1px;
   color: #fff;
-  right: 2px;
+  right: -18px;
 }
 
 /* boxes */
@@ -337,7 +364,7 @@ span.num {
 
 .num-tasks {
   position: relative;
-  font-size: 0.5em;
+  font-size: 0.7em;
   top: -6px;
   color: white;
   right: 23px;
@@ -378,12 +405,33 @@ hr {
 .user {
   display: flex;
   align-items: center;
+  padding-right: 35px;
 }
 
 .toolbar-right :nth-child(-n+3) {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .big-big-font {
   font-size: 2em;
+}
+
+.vl {
+  z-index:0;
+  margin-left:25px;
+  position:relative;
+  width:1px; 
+  height:135px; 
+  background-color:#dce1e9;
+}
+
+.circle {
+  font-weight: normal;
+  border-radius:50%;
+  width:30px; 
+  height:30px; 
+  background-color:#5384ff;
+  color: white; 
+  padding-left: 10px;
+  padding-top: 7px;
 }

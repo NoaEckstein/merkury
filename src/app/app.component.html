@@ -33,13 +33,13 @@
       </div>
       <div class="middle"></div>
       <div class="toolbar-right">
-          <button class="toolbar-right-button">
+        <button class="toolbar-right-button">
           <i class="fa fa-plus" aria-hidden="true"></i>Add project</button>
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <i class="fa fa-bell" aria-hidden="true">
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <span class="num">2</span>
-          </i>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <i class="fa fa-bell" aria-hidden="true">
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <span class="num">3</span>
+        </i>
         <div class="user">
           <img src="../assets/users/user1.png" alt="user" style="border-radius:50% ; width:40% ;top: -10px;">
           <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -50,27 +50,31 @@
       <h1 class="big-big-font">Hello John!</h1>
     </section>
     <section class="container3">
-        <img src="../assets/sales.PNG" alt="sales">
-        <img src="../assets/reports.PNG" alt="reports">
+      <img src="../assets/sales.PNG" alt="sales">
+      <img src="../assets/reports.PNG" alt="reports">
     </section>
     <section class="container4">
       <ul>
         <li class="tasks">
-          <div>Tasks</div>
-          <div>
-            <i class="fa fa-circle tasks-circle" aria-hidden="true">
+          <div class="bold big-font">Tasks</div>
+          <div style="display:flex; flex-direction: row;">
+            <div class="circle" style="background-color:#f83c7b;">
+              <span>5</span>
+            </div>
+            <div class="circle" style="margin-left:10px">2</div>
+            <!-- <i class="fa fa-circle tasks-circle" aria-hidden="true">
               <span class="num-tasks">5</span>
-            </i>
-            <i class="fa fa-circle tasks-circle" aria-hidden="true" style="color:#f83c7b;">
+            </i> -->
+            <!-- <i class="fa fa-circle tasks-circle" aria-hidden="true" style="color:#f83c7b;">
               <span class="num-tasks">2</span>
-            </i>
+            </i> -->
           </div>
         </li>
         <li *ngFor="let tesk of tasks" class="direction-row">
           <div style="margin-right:20px;">
             <img [src]="tesk.personName" alt="first letter names">
           </div>
-          <div>
+          <div style="width:100%;">
             <span class="bold big-font">{{tesk.title}}</span>
             <div [ngClass]="(tesk.status === 'delays') ? 'warning' : 'grey'" class="small-font">
               <i class="fa fa-clock-o" aria-hidden="true"></i> {{tesk.days}} days {{tesk.status}}
@@ -83,20 +87,25 @@
       </ul>
       <ul>
         <li class="tasks background-white">
-          <div>Messages</div>
-          <div>
+          <div class="bold big-font">Messages</div>
+          <div class="circle">
+            <span>2</span>
+          </div>
+          <!-- <div>
             <i class="fa fa-circle tasks-circle" aria-hidden="true">
               <span class="num-tasks">2</span>
             </i>
-          </div>
+          </div> -->
         </li>
         <li *ngFor='let message of messages' class="direction-row" [ngClass]="(message.readStatus === false) ? 'read' : 'background-white'">
           <div style="border-radius:50%; padding:0; margin-right:20px;">
             <img [src]="message.senderPhoto" alt="profile pic" style="border-radius: 50%;">
           </div>
           <div>
-           <span class="bold">{{message.senderName}} </span><span class="grey">{{message.messegeSendTime}}</span>
-            <br> <span class="small-small-font">{{message.messageContent}}</span>
+            <span class="bold">{{message.senderName}} </span>
+            <span class="grey">{{message.messegeSendTime}}</span>
+            <br>
+            <span class="small-small-font">{{message.messageContent}}</span>
             <br>
             <i class="fa fa-arrow-left grey" aria-hidden="true"></i>
             <i class="fa fa-cog grey" aria-hidden="true"></i>
@@ -105,22 +114,24 @@
       </ul>
       <ul>
         <li class="tasks">
-          <div>Activity</div>
-          <div>
+          <div class="bold big-font">Activity</div>
+          <div class="circle" style="padding-left:5px;">
+            <span>10</span>
+          </div>
+          <!-- <div>
             <i class="fa fa-circle tasks-circle" aria-hidden="true">
               <span class="num-tasks" style="right: 28px;">10</span>
             </i>
-          </div>
+          </div> -->
         </li>
         <li *ngFor='let activity of activities' class="direction-row">
           <div style="border-radius:50%; padding:0; margin-right:20px;z-index:10">
-            <img [src]="activity.senderPhoto" alt="profile pic" style="border-radius: 50%; width:100%;">
-            <!-- <hr *ngIf = '(activity.id !== 4)'> -->
-            <div *ngIf = '(activity.id !== 4)' style="z-index:0;margin-left:25px;position:relative;width:1px; height:135px; background-color:#dce1e9;"></div>
-            <!-- <canvas *ngIf = '(activity.id !== 4)' id="myCanvas" width="200" height="50" style="border:1px solid #d3d3d3;"></canvas> -->
+            <img [src]="activity.senderPhoto" alt="profile pic">
+            <div class="vl" *ngIf='(activity.id !== 4)'></div>
           </div>
           <div class="small-small-font">
-           <span class="bold">{{activity.name}}</span>  {{activity.activityName}} <span class="bold">{{activity.activityTitle}}</span>
+            <span class="bold">{{activity.name}}</span> {{activity.activityName}}
+            <span class="bold">{{activity.activityTitle}}</span>
             <br>
             <i class="fa fa-clock-o" aria-hidden="true"></i> {{activity.activityTimeRef}}
           </div>
