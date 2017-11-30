@@ -11,8 +11,6 @@ angular-seed - The client library (Angular & typescript)
 #### Install all the client dependencies
 From the project root dir execute the following
 
-`cd angular-seed`
-
 `npm i`
 
 #### Build the client under dev (currently only dev is working)
