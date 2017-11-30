@@ -2,7 +2,7 @@ export class Task {
     id: number;
     title: string;
     days: number;
-    status: string;
+    overdueStatus: string;
     personName : string;
   }
   

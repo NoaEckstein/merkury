@@ -62,12 +62,6 @@
               <span>5</span>
             </div>
             <div class="circle" style="margin-left:10px">2</div>
-            <!-- <i class="fa fa-circle tasks-circle" aria-hidden="true">
-              <span class="num-tasks">5</span>
-            </i> -->
-            <!-- <i class="fa fa-circle tasks-circle" aria-hidden="true" style="color:#f83c7b;">
-              <span class="num-tasks">2</span>
-            </i> -->
           </div>
         </li>
         <li *ngFor="let tesk of tasks" class="direction-row">
@@ -76,8 +70,8 @@
           </div>
           <div style="width:100%;">
             <span class="bold big-font">{{tesk.title}}</span>
-            <div [ngClass]="(tesk.status === 'delays') ? 'warning' : 'grey'" class="small-font">
-              <i class="fa fa-clock-o" aria-hidden="true"></i> {{tesk.days}} days {{tesk.status}}
+            <div [ngClass]="(tesk.overdueStatus === 'delays') ? 'warning' : 'grey'" class="small-font">
+              <i class="fa fa-clock-o" aria-hidden="true"></i> {{tesk.days}} days {{tesk.overdueStatus}}
             </div>
           </div>
           <div>
@@ -91,15 +85,10 @@
           <div class="circle">
             <span>2</span>
           </div>
-          <!-- <div>
-            <i class="fa fa-circle tasks-circle" aria-hidden="true">
-              <span class="num-tasks">2</span>
-            </i>
-          </div> -->
         </li>
-        <li *ngFor='let message of messages' class="direction-row" [ngClass]="(message.readStatus === false) ? 'read' : 'background-white'">
+        <li *ngFor='let message of messages' class="direction-row" [ngClass]="(message.isAlreadyRead === false) ? 'read' : 'background-white'">
           <div style="border-radius:50%; padding:0; margin-right:20px;">
-            <img [src]="message.senderPhoto" alt="profile pic" style="border-radius: 50%;">
+            <img [src]="message.senderPhotoFileName" alt="profile pic" style="border-radius: 50%;">
           </div>
           <div>
             <span class="bold">{{message.senderName}} </span>
@@ -118,15 +107,10 @@
           <div class="circle" style="padding-left:5px;">
             <span>10</span>
           </div>
-          <!-- <div>
-            <i class="fa fa-circle tasks-circle" aria-hidden="true">
-              <span class="num-tasks" style="right: 28px;">10</span>
-            </i>
-          </div> -->
         </li>
         <li *ngFor='let activity of activities' class="direction-row">
           <div style="border-radius:50%; padding:0; margin-right:20px;z-index:10">
-            <img [src]="activity.senderPhoto" alt="profile pic">
+            <img [src]="activity.senderPhotoFileName" alt="profile pic">
             <div class="vl" *ngIf='(activity.id !== 4)'></div>
           </div>
           <div class="small-small-font">

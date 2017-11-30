@@ -235,7 +235,7 @@ a {
 	width: 40px;
 	height: 40px; 
 }
-/* toolbar button */
+/* toolbar */
 .toolbar-right-button{
   display: flex;
   flex-direction: row;

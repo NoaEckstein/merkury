@@ -1,8 +1,8 @@
 export class Massage {
     id: number;
     senderName: string;
-    senderPhoto: string;
-    readStatus: boolean
+    senderPhotoFileName: string;
+    isAlreadyRead: boolean
     messegeSendTime: string;
     messageContent: string;
 }

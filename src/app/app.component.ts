@@ -17,7 +17,7 @@ export class AppComponent {
   id: number;
 
   displaySidebar(){
-    (this.clicked === true) ? this.clicked = false : this.clicked = true;
+    this.clicked = !this.clicked
   };
 
   select(id){
