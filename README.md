@@ -14,7 +14,7 @@ From the project root dir execute the following
 `npm i`
 
 #### Running the client
-`npm seve --open`
+`npm serve --open`
 
 #### Have fun :)
 
