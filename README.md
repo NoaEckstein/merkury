@@ -13,11 +13,8 @@ From the project root dir execute the following
 
 `npm i`
 
-#### Build the client under dev (currently only dev is working)
-`npm run build.dev`
-
 #### Running the client
-`npm start`
+`npm start --open`
 
 #### Have fun :)
 
